@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE aspectj PUBLIC "-//AspectJ//DTD//EN" "http://www.eclipse.org/aspectj/dtd/aspectj.dtd">  
+<aspectj>  
+<!-- 位置固定 这里注意需要在同一个包名下面    -->
+   <!--   <weaver options="-showWeaveInfo -XmessageHandlerClass:org.springframework.aop.aspectj.AspectJWeaverMessageHandler -warn:none -Xlint:ignore">  
+        <include within="com.zy.test.beans.ltw.*" />  
+    </weaver>  
+    <aspects>  
+        <aspect name="com.zy.test.beans.ltw.MethodAroundAspect" />  
+    </aspects>  
+
+-->
+    <weaver options="-showWeaveInfo -XmessageHandlerClass:org.springframework.aop.aspectj.AspectJWeaverMessageHandler -warn:none -Xlint:ignore">  
+        <include within="com.zy.test.aspectj.*" />  
+    </weaver>  
+    <aspects>  
+        <aspect name="com.zy.test.aspectj.AutoInjectDependecyAspect" />  
+    </aspects>  
+</aspectj>  
